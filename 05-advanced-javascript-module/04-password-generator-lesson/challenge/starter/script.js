@@ -90,6 +90,7 @@ var upperCasedCharacters = [
 
 // Function to prompt user for password options
 let userInput;
+let userChoicesArr = []
 function getPasswordOptions() {  
   let userInput = parseInt(prompt('How long do you want your password to be?')); 
   if (userInput<10 || userInput>64) {
@@ -97,10 +98,20 @@ function getPasswordOptions() {
     getPasswordOptions()
   }
   else {
-   
-    //return userInput
+    console.log(userInput)
+   return userInput
   }
-} 
+  
+}
+//collecting consumer choices 
+function userChoices() {
+  let upperCaseChoices = confirm ('Do you want Uppercases?');
+  let lowerCaseChoices = confirm ('Do you want lowercases?');
+  let numericChoices = confirm ('Do you want Numbers included?');
+  let specialCharactersChoices = confirm ('Do you want $pecial characters?');  
+  console.log(upperCaseChoices, lowerCaseChoices, numericChoices, specialCharactersChoices);
+}
+
 
  
 
@@ -114,8 +125,8 @@ function getRandom(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
-//getPasswordOptions()
-console.log(getPasswordOptions())
+getPasswordOptions()
+userChoices()
 //console.log(userInput)
 }
 
