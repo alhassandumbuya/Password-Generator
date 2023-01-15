@@ -1,0 +1,2 @@
+$ collecting numebrs from prompts
+sources - https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt   // const aNumber = Number(window.prompt("Type a number", ""));
