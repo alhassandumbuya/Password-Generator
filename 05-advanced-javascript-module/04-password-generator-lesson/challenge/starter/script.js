@@ -151,11 +151,23 @@ var generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
 function writePassword() {
-  var userInput = passwordLength();
+  var userInput = getPasswordOptions();
+  var passwordText = document.querySelector('#password');
   if(userInput){
     var randomPassword = generatePassword();
-    var passwordText = document.querySelector('#password');
-    passswordTest.value = randomPassword;
+    
+    passwordText.value = randomPassword;
+  } else
+  passswordTest.value = "";
   }
+
+
+   
+    
   
-  }
+  
+
+
+
+// Add event listener to generate button
+generateBtn.addEventListener('click', writePassword);
